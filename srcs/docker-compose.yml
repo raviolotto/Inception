@@ -15,14 +15,32 @@ services:
       - inception_network
     restart: always
     volumes:
-      - mariadb_volumes
-  postgress:
-    
+      - mariadb_data
+  wordpress:
+    build: ./requirements/wordpress/
+    container_name: postgress
+    networks:
+      - inception_network
+    volumes:
+      - worldpress_data
+    restart: always   
 
 volumes:
-  mariadb_volumes:
-  worldpress_volumes:
+  mariadb_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/jcardina/data
+      o: bind
+  worldpress_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/jcardina/data
+      o: bind
 
 networks:
   inception_network:
     driver: bridge
+
+#comment
