@@ -1,0 +1,28 @@
+version: 3.8
+services:
+  nginx:
+    build: ./requirements/nginx/
+    container_name: nginx
+    ports:
+      - "443:443"
+    networks:
+      - inception_network
+    restart: always
+  mariadb:
+    build: ./requirements/mariadb/
+    container_name: mariadb
+    networks:
+      - inception_network
+    restart: always
+    volumes:
+      - mariadb_volumes
+  postgress:
+    
+
+volumes:
+  mariadb_volumes:
+  worldpress_volumes:
+
+networks:
+  inception_network:
+    driver: bridge
