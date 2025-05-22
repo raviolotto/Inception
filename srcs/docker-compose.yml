@@ -16,6 +16,8 @@ services:
     restart: always
     volumes:
       - mariadb_data
+    env_file:
+      - .env
   wordpress:
     build: ./requirements/wordpress/
     container_name: postgress
@@ -23,7 +25,9 @@ services:
       - inception_network
     volumes:
       - worldpress_data
-    restart: always   
+    restart: always
+    env_file:
+      - .env
 
 volumes:
   mariadb_data:
