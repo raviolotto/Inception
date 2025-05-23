@@ -1,43 +1,21 @@
-025-05-23 15:52:47 0 [Note] InnoDB: Uses event mutexes
-2025-05-23 15:52:47 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
-2025-05-23 15:52:47 0 [Note] InnoDB: Number of pools: 1
-2025-05-23 15:52:47 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
-2025-05-23 15:52:47 0 [Note] mysqld: O_TMPFILE is not supported on /tmp (disabling future attempts)
-2025-05-23 15:52:47 0 [Note] InnoDB: Using Linux native AIO
-2025-05-23 15:52:47 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
-2025-05-23 15:52:47 0 [Note] InnoDB: Completed initialization of buffer pool
-2025-05-23 15:52:47 0 [Note] InnoDB: 128 rollback segments are active.
-2025-05-23 15:52:47 0 [Note] InnoDB: Creating shared tablespace for temporary tables
-2025-05-23 15:52:47 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
-2025-05-23 15:52:47 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
-2025-05-23 15:52:47 0 [Note] InnoDB: 10.5.28 started; log sequence number 45791; transaction id 20
-2025-05-23 15:52:47 0 [Note] Plugin 'FEEDBACK' is disabled.
-2025-05-23 15:52:47 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
-2025-05-23 15:52:47 0 [Note] InnoDB: Buffer pool(s) load completed at 250523 15:52:47
-2025-05-23 15:52:47 0 [Note] Server socket created on IP: '127.0.0.1'.
-2025-05-23 15:52:47 0 [ERROR] Can't start server : Bind on unix socket: No such file or directory
-2025-05-23 15:52:47 0 [ERROR] Do you already have another mysqld server running on socket: /run/mysqld/mysqld.sock ?
-2025-05-23 15:52:47 0 [ERROR] Aborting
-MariaDB già inizializzato. Avvio diretto del server.
-Avvio di MariaDB in foreground...
-2025-05-23 15:52:54 0 [Note] Starting MariaDB 10.5.28-MariaDB-0+deb11u2 source revision 7eded23be6597b4c485e8cad1538f2ae14541f91 server_uid DbPBW3ACOrm9RBXNupMaRz5FiQI= as process 1
-2025-05-23 15:52:54 0 [Note] InnoDB: Uses event mutexes
-2025-05-23 15:52:54 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
-2025-05-23 15:52:54 0 [Note] InnoDB: Number of pools: 1
-2025-05-23 15:52:54 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
-2025-05-23 15:52:54 0 [Note] mysqld: O_TMPFILE is not supported on /tmp (disabling future attempts)
-2025-05-23 15:52:54 0 [Note] InnoDB: Using Linux native AIO
-2025-05-23 15:52:54 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
-2025-05-23 15:52:54 0 [Note] InnoDB: Completed initialization of buffer pool
-2025-05-23 15:52:54 0 [Note] InnoDB: 128 rollback segments are active.
-2025-05-23 15:52:54 0 [Note] InnoDB: Creating shared tablespace for temporary tables
-2025-05-23 15:52:54 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
-2025-05-23 15:52:54 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
-2025-05-23 15:52:54 0 [Note] InnoDB: 10.5.28 started; log sequence number 45803; transaction id 20
-2025-05-23 15:52:54 0 [Note] Plugin 'FEEDBACK' is disabled.
-2025-05-23 15:52:54 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
-2025-05-23 15:52:54 0 [Note] InnoDB: Buffer pool(s) load completed at 250523 15:52:54
-2025-05-23 15:52:54 0 [Note] Server socket created on IP: '127.0.0.1'.
-2025-05-23 15:52:54 0 [ERROR] Can't start server : Bind on unix socket: No such file or directory
-2025-05-23 15:52:54 0 [ERROR] Do you already have another mysqld server running on socket: /run/mysqld/mysqld.sock ?
-2025-05-23 15:52:54 0 [ERROR] Aborting
+Success: WordPress downloaded.
+Error: Database connection error (2002) Connection refused
+Error: 'wp-config.php' not found.
+Either create one manually or use `wp config create`.
+Error: 'wp-config.php' not found.
+Either create one manually or use `wp config create`.
+Error: 'wp-config.php' not found.
+Either create one manually or use `wp config create`.
+Error: 'wp-config.php' not found.
+Either create one manually or use `wp config create`.
+mkdir: cannot create directory '/run/php': File exists
+/script.sh: line 32: /usr/sbin/php-fpm7.3: No such file or directory
+mkdir: cannot create directory '/var/www/': File exists
+mkdir: cannot create directory '/var/www/html': File exists
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 6975k  100 6975k    0     0  33.7M      0 --:--:-- --:--:-- --:--:-- 33.7M
+Downloading WordPress 6.8.1 (en_US)...
+Using cached file '/root/.wp-cli/cache/core/wordpress-6.8.1-en_US.tar.gz'...
+Success: WordPress downloaded.
+Error: Database connection error (2002) Connection refused
