@@ -25,6 +25,8 @@ MARIADB_DATA_DIR="/var/lib/mysql"
 if [ ! -d "$MARIADB_DATA_DIR/mysql" ]; then
     echo "Inizializzazione della directory dati di MariaDB..."
 
+    mkdir -p /run/mysqld
+    chown mysql:mysql /run/mysqld
     # Inizializzare i file di sistema del database.
     # mysqld --initialize crea la directory dei dati e i database di sistema.
     # --datadir punta al volume persistente.
