@@ -1,0 +1,2 @@
+docker compose up -d --build
+unable to get image 'srcs-wordpress': permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.49/images/srcs-wordpress/json": dial unix /var/run/docker.sock: connect: permission denied
