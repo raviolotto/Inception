@@ -1,2 +1,23 @@
 docker compose up -d --build
-unable to get image 'srcs-wordpress': permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.49/images/srcs-wordpress/json": dial unix /var/run/docker.sock: connect: permission denied
+Compose can now delegate builds to bake for better performance.
+ To do so, set COMPOSE_BAKE=true.
+[+] Building 2.4s (7/8)                                                                                  docker:default
+ => [mariadb internal] load build definition from Dockerfile                                                       0.1s
+ => => transferring dockerfile: 315B                                                                               0.0s
+ => [mariadb internal] load metadata for docker.io/library/debian:bullseye                                         1.7s
+ => [mariadb internal] load .dockerignore                                                                          0.1s
+ => => transferring context: 2B                                                                                    0.0s
+ => CANCELED [mariadb 1/4] FROM docker.io/library/debian:bullseye@sha256:cf48c31af360e1c0a0aedd33aae4d928b68c2cdf  0.2s
+ => => resolve docker.io/library/debian:bullseye@sha256:cf48c31af360e1c0a0aedd33aae4d928b68c2cdf093f1612650eb1ff4  0.1s
+ => => sha256:cf48c31af360e1c0a0aedd33aae4d928b68c2cdf093f1612650eb1ff434d1c34 4.52kB / 4.52kB                     0.0s
+ => => sha256:652b211ca872c3392daefabcc7d2f10ac50afdd9560554688334cf5903e0b868 1.02kB / 1.02kB                     0.0s
+ => => sha256:58db20b609564f247a241eb9fa3a83c55779e7c5d34800c126a1e2a2faf6efcc 453B / 453B                         0.0s
+ => => sha256:54107f2de180b7b6e9f909d2f1c6c18e10c700a6bd80a035d931768b06bb2905 0B / 53.75MB                        0.3s
+ => [mariadb internal] load build context                                                                          0.1s
+ => => transferring context: 4.03kB                                                                                0.0s
+ => CACHED [mariadb 2/4] RUN apt-get update &&     apt-get install -y mariadb-server mariadb-client procps &&      0.0s
+ => ERROR [mariadb 3/4] COPY ./script/init.sh dest /usr/local/bin/                                                 0.0s
+------
+ > [mariadb 3/4] COPY ./script/init.sh dest /usr/local/bin/:
+------
+failed to solve: failed to compute cache key: failed to calculate checksum of ref 08539df5-98e0-449f-abd3-d473c35ece61::y5914ex4jcxom8h7crdjy7a0c: "/dest": not found
