@@ -8,5 +8,6 @@ COPY ./script/script.sh /
 
 RUN chmod 777 /script.sh
 
+EXPOSE 9000
 
 CMD [ "/script.sh" ]
