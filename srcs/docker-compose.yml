@@ -1,4 +1,3 @@
-version: 3.8
 services:
   nginx:
     build: ./requirements/nginx/
@@ -8,6 +7,12 @@ services:
     networks:
       - inception_network
     restart: always
+    env_file:
+      - .env
+    volumes:
+      - wordpress_data:/var/www/html
+    depends_on:
+      - wordpress
   mariadb:
     build: ./requirements/mariadb/
     container_name: mariadb
@@ -15,32 +20,34 @@ services:
       - inception_network
     restart: always
     volumes:
-      - mariadb_data
+      - mariadb_data:/var/lib/mysql
     env_file:
       - .env
   wordpress:
     build: ./requirements/wordpress/
-    container_name: postgress
+    container_name: wordpress
     networks:
       - inception_network
     volumes:
-      - worldpress_data
+      - wordpress_data:/var/www/html
     restart: always
     env_file:
       - .env
+    depends_on:
+      - mariadb
 
 volumes:
   mariadb_data:
     driver: local
     driver_opts:
       type: none
-      device: /home/jcardina/data
+      device: /home/jacar/data/mysql  #ricoradati di cambiare la path sulla vm
       o: bind
-  worldpress_data:
+  wordpress_data:
     driver: local
     driver_opts:
       type: none
-      device: /home/jcardina/data
+      device: /home/jacar/data/wordpress #ricordati di cambiare la path sulla vm
       o: bind
 
 networks:
