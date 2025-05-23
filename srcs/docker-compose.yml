@@ -23,6 +23,12 @@ services:
       - mariadb_data:/var/lib/mysql
     env_file:
       - .env
+    healthcheck:
+      test: ["CMD", "mariadb-admin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
   wordpress:
     build: ./requirements/wordpress/
     container_name: wordpress
@@ -34,7 +40,9 @@ services:
     env_file:
       - .env
     depends_on:
-      - mariadb
+      mariadb:
+        condition: service_healthy
+    
 
 volumes:
   mariadb_data:
