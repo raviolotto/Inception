@@ -41,13 +41,13 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/jacardina/data/mysql  #ricoradati di cambiare la path sulla vm
+      device: /home/jcardina/data/mysql  #ricoradati di cambiare la path sulla vm
       o: bind
   wordpress_data:
     driver: local
     driver_opts:
       type: none
-      device: /home/jacardina/data/wordpress #ricordati di cambiare la path sulla vm
+      device: /home/jcardina/data/wordpress #ricordati di cambiare la path sulla vm
       o: bind
 
 networks:
