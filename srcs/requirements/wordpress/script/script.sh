@@ -23,7 +23,7 @@ wp user create $WP_USR $WP_EMAIL --role=author --user_pass=$WP_PWD --allow-root
 
 wp theme install astra --activate --allow-root
 
-wp plugin update --all
+wp plugin update --all --allow-root
 
 sed -i 's/listen = \/run\/php\/php7.3-fpm.sock/listen = 9000/g' /etc/php/7.4/fpm/pool.d/www.conf
 
