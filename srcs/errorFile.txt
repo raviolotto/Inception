@@ -1,21 +1,18 @@
-Success: WordPress downloaded.
-Error: Database connection error (2002) Connection refused
-Error: 'wp-config.php' not found.
-Either create one manually or use `wp config create`.
-Error: 'wp-config.php' not found.
-Either create one manually or use `wp config create`.
-Error: 'wp-config.php' not found.
-Either create one manually or use `wp config create`.
-Error: 'wp-config.php' not found.
-Either create one manually or use `wp config create`.
-mkdir: cannot create directory '/run/php': File exists
-/script.sh: line 32: /usr/sbin/php-fpm7.3: No such file or directory
+docker logs wordpress 
 mkdir: cannot create directory '/var/www/': File exists
 mkdir: cannot create directory '/var/www/html': File exists
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100 6975k  100 6975k    0     0  33.7M      0 --:--:-- --:--:-- --:--:-- 33.7M
+100 6975k  100 6975k    0     0  19.4M      0 --:--:-- --:--:-- --:--:-- 19.4M
 Downloading WordPress 6.8.1 (en_US)...
-Using cached file '/root/.wp-cli/cache/core/wordpress-6.8.1-en_US.tar.gz'...
+md5 hash verified: 1bfd868dd21ff736e94307f2c9828c7a
 Success: WordPress downloaded.
 Error: Database connection error (2002) Connection refused
+Error: 'wp-config.php' not found.
+Either create one manually or use `wp config create`.
+Error: 'wp-config.php' not found.
+Either create one manually or use `wp config create`.
+Error: 'wp-config.php' not found.
+Either create one manually or use `wp config create`.
+Error: 'wp-config.php' not found.
+Either create one manually or use `wp config create`.
