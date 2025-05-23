@@ -10,6 +10,8 @@ RUN mkdir -p /run/mysqld && \
 
 COPY ./script/init.sh /usr/local/bin/
 
+COPY ./script/50-custom.cnf /etc/mysql/conf.d/50-custom.cnf
+
 RUN chmod +x /usr/local/bin/init.sh
 
 EXPOSE 3306
